@@ -2,7 +2,7 @@ form {
     background-color: #10111d;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 600px;
+    height: 620px;
     padding: 20px;
     width: 520px;
     margin: 20px auto;
@@ -41,7 +41,7 @@ input[type="number"] {
     width: 70px;
 }
 
-button {
+#button {
     background-color: white;
     color: black;
     padding: 0.5rem 1rem;
@@ -56,6 +56,6 @@ button {
     margin-left: 10rem;
 }
 
-button:hover {
+#button:hover {
     background-color: rgb(197, 195, 195);
 }

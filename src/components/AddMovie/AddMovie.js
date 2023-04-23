@@ -5,13 +5,19 @@ export default function AddMovie({ addMovie }) {
 
     let titleRef = useRef();
     let posurlRef = useRef();
+    let trailerLinkRef = useRef();
     let descRef = useRef();
     let ratingRef = useRef();
 
     function submitted(ev) {
         ev.preventDefault();
 
-        let newMovie = { title: titleRef.current.value, description: descRef.current.value, posterURL: posurlRef.current.value, rating: ratingRef.current.value };
+        let newMovie = { 
+            title: titleRef.current.value, 
+            description: descRef.current.value, 
+            posterURL: posurlRef.current.value,
+            trailerLink: trailerLinkRef.current.value, 
+            rating: ratingRef.current.value };
         addMovie(newMovie);
 
         //save all this information in localStorage
@@ -28,6 +34,9 @@ export default function AddMovie({ addMovie }) {
 
             <label htmlFor="posterURL">Poster URL </label>
             <input ref={posurlRef} type="text" id="posterURL" placeholder="Poster URL" />
+
+            <label htmlFor="trailerLink">Trailer Link </label>
+            <input ref={trailerLinkRef} type="text" id="trailerLink" placeholder="Trailer Link" />
 
             <label htmlFor="description">Description</label>
             <textarea ref={descRef} id="description" placeholder="Description"></textarea>
