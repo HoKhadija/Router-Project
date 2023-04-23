@@ -1,0 +1,13 @@
+.desc {
+    margin-right: 150px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe{
+    align-items: center;
+    width : 900px;
+    height: 380px; 
+}
