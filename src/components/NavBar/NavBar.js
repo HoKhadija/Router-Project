@@ -1,27 +1,26 @@
 import React from 'react';
 import LogoPic from './Best Movies.png'
 import "./NavBar.css"
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
 
-        <div>
+        <div id='navBar'>
             <nav className="navbar">
-                <img
-                    className="navbar__logo"
-                    src={LogoPic}
-                    alt="Best Movies Logo"
-                />
+                <Link to="/">
+                    <img className="navbar__logo" src={LogoPic} alt="Netflix Logo" />
+                </Link>
 
                 <ul className="navbar__links" style={{ flexWrap: "wrap" }}>
                     <li>
-                        <a href="#hpme">Home</a>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li>
-                        <a href="#List">Movies List</a>
+                        <a href="#movieList">Movies List</a>
                     </li>
                     <li>
-                        <a href="#Addnew">Add Movie</a>
+                        <a href="#addNew">Add Movie</a>
                     </li>
                 </ul>
             </nav>
